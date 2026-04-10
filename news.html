@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Battle Arena</title>
+    <link rel="stylesheet" href="news.css">
+    <style>
+        .create-article-link {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: #fff;
+            color: #000;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 20px rgba(255,255,255,0.3);
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .create-article-link:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(255,255,255,0.4);
+        }
+
+        .delete-article-btn {
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: #f04444;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .delete-article-btn:hover {
+            background-color: #d03333;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/header-logo.png">
+
+    <nav>
+        <a href="index.html">GAME</a>
+        <a href="heroes.html">HEROES</a>
+        <a href="news.html">NEWS</a>
+        <a href="about.html">ABOUT</a>
+    </nav>
+
+    <div class="header-right">
+        <a href="https://www.roblox.com/games/1458767429/ABA" class="btn-outline">PLAY FOR FREE</a>
+    </div>
+    </header>
+    
+    <section class="featured-hero-section">
+        <div class="featured-badge">FEATURED POST</div>
+        <div class="featured-hero-date">March 25, 2026</div>
+        <h1 class="featured-hero-title">7.41 Gameplay Patch</h1>
+        <a href="#" class="featured-read-more">Read More</a>
+    </section>
+
+    <div class="news-cards-grid">
+        
+        <div class="news-article-card news-article-card-1">
+            <div class="news-article-image"></div>
+            <div class="news-article-content">
+                <div class="news-article-date">May 13, 2023</div>
+                <h3 class="news-article-title">Introducing Accelerator</h3>
+                <div class="news-article-text">Accelerator is the name used to refer to the 1st-ranked Level 5, the strongest Esper currently residing in Academy City.</div>
+            </div>
+        </div>
+
+        <div class="news-article-card news-article-card-2">
+            <div class="news-article-image"></div>
+            <div class="news-article-content">
+                <div class="news-article-date">April 30, 2023</div>
+                <h3 class="news-article-title">ABA x Fate</h3>
+                <div class="news-article-text">It's open season on the world's most dangerous heroes, and you're just the hero we need to track them all down.</div>
+            </div>
+        </div>
+
+        <div class="news-article-card news-article-card-3">
+            <div class="news-article-image"></div>
+            <div class="news-article-content">
+                <div class="news-article-date">March 25, 2023</div>
+                <h3 class="news-article-title">Explore Wandering Waters</h3>
+                <div class="news-article-text">We've re-made the river that runs through the ABA map. Not only is it wider, its current can speed your movement.</div>
+            </div>
+        </div>
+
+        <div class="news-article-card news-article-card-4">
+            <div class="news-article-image"></div>
+            <div class="news-article-content">
+                <div class="news-article-date">February 8, 2023</div>
+                <h3 class="news-article-title">Anything Battle Arena</h3>
+                <div class="news-article-text">Meet Raiden, 2B and Shadow Dummy.</div>
+            </div>
+        </div>
+
+        <div class="news-article-card news-article-card-5">
+            <div class="news-article-image"></div>
+            <div class="news-article-content">
+                <div class="news-article-date">January 8, 2023</div>
+                <h3 class="news-article-title">Pushing The Ceiling</h3>
+                <div class="news-article-text">We have decided to decrease latency and improve the server quality.</div>
+            </div>
+        </div>
+
+        <div class="news-article-card news-article-card-6">
+            <div class="news-article-image"></div>
+            <div class="news-article-content">
+                <div class="news-article-date">December 25, 2022</div>
+                <h3 class="news-article-title">Christmas Was Stolen</h3>
+                <div class="news-article-text">We will be doing our christmas event on new years eve this year, so be sure to stay in the christmas spirit.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating button to create new articles -->
+    <a href="form.html" class="create-article-link">+ Create Article</a>
+
+    <footer class="main-footer">
+            <div class="brand-container">
+                <div class="aba-logo"></div>
+            
+            <p class="legal-text">
+                ABA and the ABA logo are trademarks and/or registered trademarks of Dogs Studios South. 2026 Dogs Studios, all rights reserved.
+            </p>
+    </footer>
+
+    <script src="article-manager.js"></script>
+    <script>
+        document.querySelectorAll('.news-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.news-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

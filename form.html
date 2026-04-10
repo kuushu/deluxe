@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Article - Anime Battle Arena</title>
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="create-article.css">
+</head>
+<body>
+    <header>
+        <img src="images/header-logo.png">
+
+        <nav>
+            <a href="index.html">GAME</a>
+            <a href="heroes.html">HEROES</a>
+            <a href="news.html">NEWS</a>
+            <a href="about.html">ABOUT</a>
+        </nav>
+
+        <div class="header-right">
+            <a href="https://www.roblox.com/games/1458767429/ABA" class="btn-outline">PLAY FOR FREE</a>
+        </div>
+    </header>
+
+    <div class="create-article-container">
+        <h1 class="create-article-heading">Create New Article</h1>
+        
+        <form id="articleForm" class="article-form">
+            <div class="form-group">
+                <label for="articleTitle">Article Title</label>
+                <input type="text" id="articleTitle" name="articleTitle" required placeholder="Enter article title">
+            </div>
+
+            <div class="form-group">
+                <label for="articleDate">Publication Date</label>
+                <input type="text" id="articleDate" name="articleDate" required placeholder="e.g., March 25, 2026">
+            </div>
+
+            <div class="form-group">
+                <label for="articleDescription">Description</label>
+                <textarea id="articleDescription" name="articleDescription" required placeholder="Enter article description" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="articleImage">Article Image</label>
+                <input type="file" id="articleImage" name="articleImage" accept="image/*">
+                <div class="image-preview" id="imagePreview">
+                    <span class="preview-text">No image selected</span>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Create Article</button>
+                <a href="news.html" class="btn-cancel">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+    <footer class="main-footer">
+        <div class="brand-container">
+            <div class="aba-logo"></div>
+        
+        <p class="legal-text">
+            ABA and the ABA logo are trademarks and/or registered trademarks of Dogs Studios South. 2026 Dogs Studios, all rights reserved.
+        </p>
+    </footer>
+
+    <script src="article-manager.js"></script>
+</body>
+</html>

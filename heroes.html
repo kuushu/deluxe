@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anime Battle Arena</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="hero-heroes">
+    <div class="overlay"></div>
+
+    <header>
+            <img src="images/header-logo.png">
+
+        <nav>
+            <a href="index.html">GAME</a>
+            <a href="heroes.html">HEROES</a>
+            <a href="news.html">NEWS</a>
+            <a href="about.html">ABOUT</a>
+        </nav>
+
+        <div class="header-right">
+            <a href="https://www.roblox.com/games/1458767429/ABA" class="btn-outline">PLAY FOR FREE</a>
+        </div>
+    </header>
+    
+    <div class="heroes-content">
+        <div class="find-your-hero">
+            FIND YOUR HERO
+    </div>
+    <div class="find-your-hero-description">
+            The roster of heroes in ABA is vast and endlessly diverse: here you'll encounter tactical mages, 
+            ferocious brutes, and cunning scoundrels. Their incredible abilities and 
+            devastating ultimates will surely lead you to victory.
+    </div>
+
+    <div class="hero-search">
+        <div class="filter-text">FILTER</div>
+        <div class="roster-text">ROSTER</div>
+        <div class="category-one-piece">
+            <button class="filter-btn" data-filter="one-piece"></button>
+        </div>
+        <div class="category-dragon-ball-z">
+            <button class="filter-btn" data-filter="dragon-ball-z"></button>
+        </div>
+        <div class="category-naruto">
+            <button class="filter-btn" data-filter="naruto"></button>
+        </div>
+        <div class="category-bleach">
+            <button class="filter-btn" data-filter="bleach"></button>
+        </div>
+        <div class="category-fate">
+            <button class="filter-btn" data-filter="fate"></button>
+        </div>
+        <div class="hero-search-background">
+            <img class="search-icon" src="images/search.png">
+            <input type="text" id="heroSearch" placeholder="Search for a hero...">
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="char-ace" data-name="ace" data-series="one-piece"></div>
+        <div class="char-achilles" data-name="achilles" data-series="fate"></div>
+        <div class="char-broly" data-name="broly" data-series="dragon-ball-z"></div>
+        <div class="char-starrk" data-name="starrk" data-series="bleach"></div>
+        <div class="char-frieza" data-name="frieza" data-series="dragon-ball-z"></div>
+        <div class="char-gaara" data-name="gaara" data-series="naruto"></div>
+        <div class="char-gilgamesh" data-name="gilgamesh" data-series="fate"></div>
+        <div class="char-grimmjow" data-name="grimmjow" data-series="bleach"></div>
+        <div class="char-ichigo" data-name="ichigo kurosaki" data-series="bleach"></div>
+        <div class="char-itachi" data-name="itachi" data-series="naruto"></div>
+        <div class="char-kizaru" data-name="kizaru" data-series="one-piece"></div>
+        <div class="char-kiritsugu" data-name="kiritsugu emiya" data-series="fate"></div>
+        <div class="char-lancer" data-name="lancer" data-series="fate"></div>
+        <div class="char-law" data-name="trafalgar law" data-series="one-piece"></div>
+        <div class="char-luffy" data-name="luffy" data-series="one-piece"></div>
+        <div class="char-might" data-name="might guy" data-series="naruto"></div>
+        <div class="char-naruto" data-name="naruto" data-series="naruto"></div>
+        <div class="char-pain" data-name="pain" data-series="naruto"></div>
+        <div class="char-piccolo" data-name="piccolo" data-series="dragon-ball-z"></div>
+        <div class="char-rukia" data-name="rukia" data-series="bleach"></div>
+        <div class="char-saber" data-name="saber" data-series="fate"></div>
+        <div class="char-sanji" data-name="sanji" data-series="one-piece"></div>
+        <div class="char-sasuke" data-name="sasuke" data-series="naruto"></div>
+        <div class="char-shirou" data-name="shirou" data-series="fate"></div>
+        <div class="char-shunsui" data-name="shunsui" data-series="bleach"></div>
+        <div class="char-gohan" data-name="gohan" data-series="dragon-ball-z"></div>
+        <div class="char-goku" data-name="goku" data-series="dragon-ball-z"></div>
+        <div class="char-ulquiorra" data-name="ulquiorra cifer" data-series="bleach"></div>
+        <div class="char-vegeta" data-name="vegeta" data-series="dragon-ball-z"></div>
+        <div class="char-zoro" data-name="zoro" data-series="one-piece"></div>
+    </div>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="brand-container">
+        <div class="aba-logo"></div>
+    </div>
+    <p class="legal-text">
+        ABA and the ABA logo are trademarks and/or registered trademarks of Dogs Studios South. 2026 Dogs Studios, all rights reserved.
+    </p>
+</footer>
+
+<script src="search.js"></script>
+</body>
+</html>
