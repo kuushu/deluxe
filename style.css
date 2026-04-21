@@ -1,0 +1,1819 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin: 0;  
+    min-height: 100vh;
+    background-image: url("images/back.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-heroes {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+.hero-news {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.85));
+}
+
+main, .content-wrapper {
+    flex: 1 0 auto;
+}
+
+/* Header */
+
+header {
+    position: relative;
+    z-index: 2;
+    padding: 25px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-width: 200px;
+    height: auto;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-outline {
+    padding: 10px 18px;
+    border: 1px solid white;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: black;
+}
+
+.login {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Content */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 80px 140px;
+    max-width: 1000px;
+}
+
+.heroes-content {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 90%;
+    max-width: 820px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.find-your-hero {
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.find-your-hero-description {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hero-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 820px;
+    height: 70px;
+    margin-top: 110px;
+    padding: 10px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-origin: padding-box;
+    border: 1px solid rgba(17, 17, 17, 0.565);
+    border-radius: 5px;
+}
+
+.filter-text {
+    font-size: 20px;
+    position: relative;
+    font-family: 'Georgia', serif;
+    left: 25px;
+}
+
+.roster-text {
+    font-size: 15px;
+    position: relative;
+    left: 75px;
+    color: #2596be;
+    font-family: 'Garamond', serif;
+}
+
+.category-one-piece {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 44px;
+    height: 34px;
+    margin-left: 100px;
+    background-image: url(images/filter-one-piece-active.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    filter: brightness(0.5) saturate(0);
+    transition: filter 0.1s ease-in-out;
+}
+
+.category-one-piece:active {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 44px;
+    height: 34px;
+    margin-left: 100px;
+    background-image: url(images/filter-one-piece-active.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    filter: brightness(1) saturate(1);
+    transition: filter 0.1s ease-in-out;
+}
+
+.category-bleach {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 44px;
+    height: 34px;
+    margin-left: -4px;
+    background-image: url(images/filter-bleach-active.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    filter: brightness(0.5) saturate(0);
+    transition: filter 0.1s ease-in-out;
+}
+
+.category-bleach:active {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 44px;
+    height: 34px;
+    margin-left: -4px;
+    background-image: url(images/filter-bleach-active.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    filter: brightness(1) saturate(1);
+    transition: filter 0.1s ease-in-out;
+}
+
+.category-dragon-ball-z {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 44px;
+    height: 34px;
+    margin-left: -4px;
+    background-image: url(images/filter-dragon-ball-z-active.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    filter: brightness(0.5) saturate(0);
+    transition: filter 0.1s ease-in-out;
+}
+
+.category-dragon-ball-z:active {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 44px;
+    height: 34px;
+    margin-left: -4px;
+    background-image: url(images/filter-dragon-ball-z-active.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    filter: brightness(1) saturate(1);
+    transition: filter 0.1s ease-in-out;
+}
+
+.category-naruto {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 44px;
+    height: 34px;
+    margin-left: -4px;
+    background-image: url(images/filter-naruto-active.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    filter: brightness(0.5) saturate(0);
+    transition: filter 0.1s ease-in-out;
+}
+
+.category-naruto:active {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 44px;
+    height: 34px;
+    margin-left: -4px;
+    background-image: url(images/filter-naruto-active.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    filter: brightness(1) saturate(1);
+    transition: filter 0.1s ease-in-out;
+}
+
+.category-fate {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 44px;
+    height: 34px;
+    margin-left: -4px;
+    margin-right: 40px;
+    background-image: url(images/filter-fate-active.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    filter: brightness(0.5) saturate(0);
+    transition: filter 0.1s ease-in-out;
+}
+
+.category-fate:active {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 44px;
+    height: 34px;
+    margin-left: -4px;
+    margin-right: 40px;
+    background-image: url(images/filter-fate-active.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    filter: brightness(1) saturate(1);
+    transition: filter 0.1s ease-in-out;
+}
+
+.filter-btn {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    outline: none;
+}
+
+.hero-search-background {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 300px;
+    max-width: 800px;
+    height: 48px;
+    padding: 10px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-origin: padding-box;
+    border: 1px solid rgba(17, 17, 17, 0.565);
+    border-radius: 2px;
+}
+
+.hero-search-background input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    display: block;
+    margin-left: auto;
+    font-size: 17px;
+    opacity: 0%;
+    background-color: #474747;
+    caret-color: white;
+    color: white; 
+}
+
+.search-icon {
+    width: 30px;
+}
+
+input[type=text]:focus {
+    opacity: 100%;
+    outline: none;
+}
+
+
+/* ПЕРСОНАЖИ --------------------------------- */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    position: relative;
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* ACE */
+.char-ace {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/ace.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-ace-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-ace-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* ACHILLES */
+.char-achilles {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/achilles.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-achilles-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-achilles-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* BROLY */
+.char-broly {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/broly.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-broly-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-broly-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* STARRK */
+.char-starrk {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/starrk.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-starrk-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-starrk-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* FRIEZA */
+.char-frieza {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/frieza.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-frieza-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-frieza-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* GAARA */
+.char-gaara {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/gaara.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-gaara-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-gaara-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* GILGAMESH */
+.char-gilgamesh {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/gilgamesh.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-gilgamesh-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-gilgamesh-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* GRIMMJOW */
+.char-grimmjow {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/grimmjow.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-grimmjow-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-grimmjow-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* ICHIGO */
+.char-ichigo {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/ichigo.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-ichigo-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-ichigo-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* ITACHI */
+.char-itachi {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/itachi.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-itachi-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-itachi-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* KIZARU */
+.char-kizaru {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/kizaru.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-kizaru-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-kizaru-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* KIRITSUGU */
+.char-kiritsugu {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/kiritsugu.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-kiritsugu-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-kiritsugu-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* LANCER */
+.char-lancer {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/lancer.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-lancer-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-lancer-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* LAW */
+.char-law {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/law.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-law-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-law-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* LUFFY */
+.char-luffy {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/luffy.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-luffy-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-luffy-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* MIGHT */
+.char-might {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/might.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-might-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-might-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* NARUTO */
+.char-naruto {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/naruto.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-naruto-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-naruto-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* PAIN */
+.char-pain {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/pain.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-pain-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-pain-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* PICCOLO */
+.char-piccolo {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/piccolo.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-piccolo-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-piccolo-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* RUKIA */
+.char-rukia {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/rukia.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-rukia-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-rukia-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* SABER */
+.char-saber {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/saber.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-saber-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-saber-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* SANJI */
+.char-sanji {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/sanji.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-sanji-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-sanji-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* SASUKE */
+.char-sasuke {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/sasuke.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-sasuke-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-sasuke-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* SHIROU */
+.char-shirou {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/shirou.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-shirou-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-shirou-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* SHUNSUI */
+.char-shunsui {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/shunsui.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-shunsui-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-shunsui-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* GOHAN */
+.char-gohan {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/gohan.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-gohan-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-gohan-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* GOKU */
+.char-goku {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/goku.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-goku-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-goku-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* ULQUIORRA */
+.char-ulquiorra {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/ulquiorra.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-ulquiorra-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-ulquiorra-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* VEGETA */
+.char-vegeta {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/vegeta.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-vegeta-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-vegeta-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* ZORO */
+.char-zoro {
+    position: relative;
+    aspect-ratio: 1.9 / 1;
+    background-image: url(images/chars/zoro.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.char-zoro-name {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    z-index: 2;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.char-zoro-gradient {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.char-ace:hover .char-ace-name,
+.char-ace:hover .char-ace-gradient {
+    opacity: 1;
+}
+
+.char-achilles:hover .char-achilles-name,
+.char-achilles:hover .char-achilles-gradient {
+    opacity: 1;
+}
+
+.char-broly:hover .char-broly-name,
+.char-broly:hover .char-broly-gradient {
+    opacity: 1;
+}
+
+.char-starrk:hover .char-starrk-name,
+.char-starrk:hover .char-starrk-gradient {
+    opacity: 1;
+}
+
+.char-frieza:hover .char-frieza-name,
+.char-frieza:hover .char-frieza-gradient {
+    opacity: 1;
+}
+
+.char-gaara:hover .char-gaara-name,
+.char-gaara:hover .char-gaara-gradient {
+    opacity: 1;
+}
+
+.char-gilgamesh:hover .char-gilgamesh-name,
+.char-gilgamesh:hover .char-gilgamesh-gradient {
+    opacity: 1;
+}
+
+.char-grimmjow:hover .char-grimmjow-name,
+.char-grimmjow:hover .char-grimmjow-gradient {
+    opacity: 1;
+}
+
+.char-ichigo:hover .char-ichigo-name,
+.char-ichigo:hover .char-ichigo-gradient {
+    opacity: 1;
+}
+
+.char-itachi:hover .char-itachi-name,
+.char-itachi:hover .char-itachi-gradient {
+    opacity: 1;
+}
+
+.char-kizaru:hover .char-kizaru-name,
+.char-kizaru:hover .char-kizaru-gradient {
+    opacity: 1;
+}
+
+.char-kiritsugu:hover .char-kiritsugu-name,
+.char-kiritsugu:hover .char-kiritsugu-gradient {
+    opacity: 1;
+}
+
+.char-lancer:hover .char-lancer-name,
+.char-lancer:hover .char-lancer-gradient {
+    opacity: 1;
+}
+
+.char-law:hover .char-law-name,
+.char-law:hover .char-law-gradient {
+    opacity: 1;
+}
+
+.char-luffy:hover .char-luffy-name,
+.char-luffy:hover .char-luffy-gradient {
+    opacity: 1;
+}
+
+.char-might:hover .char-might-name,
+.char-might:hover .char-might-gradient {
+    opacity: 1;
+}
+
+.char-naruto:hover .char-naruto-name,
+.char-naruto:hover .char-naruto-gradient {
+    opacity: 1;
+}
+
+.char-pain:hover .char-pain-name,
+.char-pain:hover .char-pain-gradient {
+    opacity: 1;
+}
+
+.char-piccolo:hover .char-piccolo-name,
+.char-piccolo:hover .char-piccolo-gradient {
+    opacity: 1;
+}
+
+.char-rukia:hover .char-rukia-name,
+.char-rukia:hover .char-rukia-gradient {
+    opacity: 1;
+}
+
+.char-saber:hover .char-saber-name,
+.char-saber:hover .char-saber-gradient {
+    opacity: 1;
+}
+
+.char-sanji:hover .char-sanji-name,
+.char-sanji:hover .char-sanji-gradient {
+    opacity: 1;
+}
+
+.char-sasuke:hover .char-sasuke-name,
+.char-sasuke:hover .char-sasuke-gradient {
+    opacity: 1;
+}
+
+.char-shirou:hover .char-shirou-name,
+.char-shirou:hover .char-shirou-gradient {
+    opacity: 1;
+}
+
+.char-shunsui:hover .char-shunsui-name,
+.char-shunsui:hover .char-shunsui-gradient {
+    opacity: 1;
+}
+
+.char-gohan:hover .char-gohan-name,
+.char-gohan:hover .char-gohan-gradient {
+    opacity: 1;
+}
+
+.char-goku:hover .char-goku-name,
+.char-goku:hover .char-goku-gradient {
+    opacity: 1;
+}
+
+.char-ulquiorra:hover .char-ulquiorra-name,
+.char-ulquiorra:hover .char-ulquiorra-gradient {
+    opacity: 1;
+}
+
+.char-vegeta:hover .char-vegeta-name,
+.char-vegeta:hover .char-vegeta-gradient {
+    opacity: 1;
+}
+
+.char-zoro:hover .char-zoro-name,
+.char-zoro:hover .char-zoro-gradient {
+    opacity: 1;
+}
+
+
+.author {
+    color: #b8b8b8;
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 30%;
+}
+
+/* ПЕРСОНАЖИ --------------------------------- */
+
+.hidden {
+    display: none;
+}
+
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 30px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid white;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: white;
+    color: black;
+}
+
+/* новости */
+
+.news-section {
+    position: relative;
+    z-index: 2;
+    padding: 0 60px 40px;
+}
+
+.news-header {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.news-grid {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.news-card {
+    width: 600px;
+    background: #131313;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.15s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-date {
+    font-size: 12px;
+    opacity: 0.6;
+    margin-bottom: 8px;
+}
+
+.news-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.news-text {
+    font-size: 13px;
+    opacity: 0.75;
+    line-height: 1.5;
+}
+
+/* футер */
+.main-footer {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    background-color: #000000;
+    color: #808080;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    margin-top: auto;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.aba-logo {
+    background-image: url(images/header-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 200px;
+    height: 60px;
+}
+
+.legal-text {
+    max-width: 600px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 0 20px;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+}
+
+
+/* адаптивность
+
+/* до 1200px */
+@media (max-width: 1200px) {
+    .news-grid {
+        gap: 30px;
+    }
+    
+    .news-card {
+        width: calc(33.333% - 20px);
+    }
+    
+    .heroes-content {
+        width: 95%;
+    }
+    
+    .find-your-hero {
+        font-size: 80px;
+    }
+}
+
+/* до 992px */
+@media (max-width: 992px) {
+    header {
+        padding: 20px 40px;
+    }
+    
+    header img {
+        max-width: 150px;
+    }
+    
+    nav {
+        gap: 25px;
+    }
+    
+    nav a {
+        font-size: 12px;
+    }
+    
+    .hero-content {
+        padding: 0 40px 100px;
+    }
+    
+    .hero-title {
+        font-size: 48px;
+    }
+    
+    .find-your-hero {
+        font-size: 60px;
+    }
+    
+    .find-your-hero-description {
+        font-size: 18px;
+    }
+    
+    .news-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .news-card {
+        width: 100%;
+    }
+    
+    .news-section {
+        padding: 0 40px 40px;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* до 768px */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 30px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    header img {
+        max-width: 120px;
+    }
+    
+    nav {
+        gap: 20px;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        padding: 0 30px 80px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .find-your-hero {
+        font-size: 48px;
+    }
+    
+    .find-your-hero-description {
+        font-size: 16px;
+    }
+    
+    .hero-search {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    .filter-text,
+    .roster-text {
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .category-one-piece {
+        margin-left: 0;
+    }
+    
+    .category-fate {
+        margin-right: 0;
+    }
+    
+    .hero-search-background {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .heroes-content {
+        top: 150px;
+        width: 90%;
+    }
+    
+    .news-section {
+        padding: 0 30px 30px;
+    }
+}
+
+/* до 576px */
+@media (max-width: 576px) {
+    header {
+        padding: 15px 20px;
+    }
+    
+    header img {
+        max-width: 100px;
+    }
+    
+    nav {
+        gap: 15px;
+    }
+    
+    nav a {
+        font-size: 11px;
+    }
+    
+    .btn-outline {
+        padding: 8px 14px;
+        font-size: 11px;
+    }
+    
+    .hero-content {
+        padding: 0 20px 60px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .author {
+        font-size: 14px;
+    }
+    
+    .btn-primary {
+        padding: 12px 24px;
+        font-size: 12px;
+    }
+    
+    .find-your-hero {
+        font-size: 36px;
+    }
+    
+    .find-your-hero-description {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    .hero-search {
+        margin-top: 80px;
+    }
+    
+    .heroes-content {
+        top: 120px;
+        width: 95%;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .news-section {
+        padding: 0 20px 20px;
+    }
+    
+    .news-card img {
+        height: 150px;
+    }
+    
+    .legal-text {
+        font-size: 11px;
+    }
+    
+    .aba-logo {
+        width: 150px;
+        height: 45px;
+    }
+}
+
+/* до 400px */
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .find-your-hero {
+        font-size: 28px;
+    }
+    
+    .find-your-hero-description {
+        font-size: 13px;
+    }
+    
+    .filter-text {
+        font-size: 16px;
+    }
+    
+    .roster-text {
+        font-size: 13px;
+    }
+    
+    .category-one-piece,
+    .category-dragon-ball-z,
+    .category-naruto,
+    .category-bleach,
+    .category-fate {
+        width: 36px;
+        height: 28px;
+    }
+}
